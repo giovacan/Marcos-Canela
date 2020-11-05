@@ -1,5 +1,11 @@
+// Import useState and useEffect hooks
 import { useState, useEffect } from 'react'
 
+/**
+ * @function useCarousel A custom hook for carousel logic
+ * @param {String} id Id of carousel
+ * @param {Number} numberOfSlides Number of slides to show
+ */
 function useCarousel(id, numberOfSlides) {
 	const [elements, setElements] = useState({
 		carousel: null
