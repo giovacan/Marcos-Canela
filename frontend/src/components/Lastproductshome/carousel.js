@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react'
 
 function useCarousel(id) {
 	const [elements, setElements] = useState({
-		leftControl: null,
-		rightControl: null,
 		carousel: null
 	})
 
@@ -12,10 +10,8 @@ function useCarousel(id) {
 	})
 
 	useEffect(() => {
-		const leftControl = document.querySelector(`#${id}-left-control`)
-		const rightControl = document.querySelector(`#${id}-right-control`)
 		const carousel = document.querySelector(`#${id}`)
-		setElements({ leftControl, rightControl, carousel })
+		setElements({ carousel })
 	}, [])
 
 	const handleLeftControlClick = () => {}

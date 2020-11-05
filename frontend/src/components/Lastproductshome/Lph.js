@@ -16,6 +16,7 @@ import Leftcontroller from './Leftcontrol.js'
 // App component
 function Lph({ carouselId }) {
 	const carousel = useCarousel(carouselId)
+	const { handleLeftControlClick, handleRightControlClick } = carousel
 	return (
 		<div class='last-products'>
 			<div class='titlelph'>
@@ -23,7 +24,7 @@ function Lph({ carouselId }) {
 			</div>
 			<div class='featured-products'>
 				<div className='slide-container'>
-					<button className='control previous'>
+					<button className='control previous' onClick={handleLeftControlClick}>
 						<Leftcontroller id='previous' />
 					</button>
 					<div className='carousel'>
@@ -88,7 +89,7 @@ function Lph({ carouselId }) {
 							</div>
 						</div>
 					</div>
-					<button className='control next'>
+					<button className='control next' onClick={handleRightControlClick}>
 						<Rightcontroller id='next' />
 					</button>
 				</div>
