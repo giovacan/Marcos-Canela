@@ -12,6 +12,7 @@ function useCarousel(id) {
 	useEffect(() => {
 		const carousel = document.querySelector(`#${id}`)
 		setElements({ carousel })
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	const handleSlideChange = () => {
