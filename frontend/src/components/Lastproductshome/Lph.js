@@ -19,14 +19,14 @@ function Lph({ carouselId }) {
 	return (
 		<div class='last-products'>
 			<div class='titlelph'>
-				<h3></h3>
+				<h3>Title</h3>
 			</div>
 			<div class='featured-products'>
-				<slide className='slide-container'>
-					<control className='control previous'>
+				<div className='slide-container'>
+					<button className='control previous'>
 						<Leftcontroller id='previous' />
-					</control>
-					<carousel className='carousel'>
+					</button>
+					<div className='carousel'>
 						<div className='product 1'>
 							<img src={Img1} className='img1' alt='' />
 							<h2 className='titleproduct'>Hola mundo</h2>
@@ -87,11 +87,11 @@ function Lph({ carouselId }) {
 								</div>
 							</div>
 						</div>
-					</carousel>
-					<control className='control next'>
+					</div>
+					<button className='control next'>
 						<Rightcontroller id='next' />
-					</control>
-				</slide>
+					</button>
+				</div>
 			</div>
 		</div>
 	)
