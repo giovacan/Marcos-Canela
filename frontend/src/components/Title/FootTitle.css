@@ -1,0 +1,31 @@
+.footnavlogo {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+.foot-logo-nav {
+  margin-top: 20px;
+  color: white;
+  font-size: 1.8em;
+}
+@media screen and (max-width: 1050px) {
+  .footnavlogo {
+    width: 100%;
+  }
+}
+/*mobile menu*/
+@media screen and (max-width: 760px) {
+  .footnavlogo {
+    width: 100%;
+    
+    justify-content: center;
+    padding-bottom: 25px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .footnavlogo:hover {
+    background-color: #2f3640;
+    cursor: pointer;
+  }
+}

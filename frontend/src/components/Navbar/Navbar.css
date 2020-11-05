@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    background-color: lightslategrey;
+    color: white;
+    font-size: 16px;
+}
+
+.container {
+    margin: auto;
+}
+
+/* Navigation */
+
+.container {
+    width: 90%;
+    padding: 20px 0px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid white;
+  }
+  
+  .menu-resp {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .menu-def {
+    display: flex;
+    justify-content: flex-end;
+    transition: width 1s;
+  }
+ 
+  .acc-lg {
+    display: block;
+    margin-right: 50px;
+    transition: width 1s;
+  }
+  .acc-x2 {
+    display: none;
+    transition: width 1s;
+  }
+  .search {
+    margin-left: 0px;
+    margin-right: 50px;
+    transition: width 1s;
+  }
+  
+  .cartlg {
+    display: block;
+    transition: width 1s;
+  }
+  .cartx2 {
+    display: none;
+    transition: width 1s;
+  }
+  
+  .menu-icon {
+    display: none;
+}
+
+  @media screen and (max-width: 3000px) {
+    .menu-resp {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      transition: width 1s;
+    }
+    .menu-def {
+      width: 1%;
+    }
+    .fa-times {
+      color: #fff;
+      font-size: 2rem;
+  }
+    .nav-menu {
+      width: 45%;
+      display: flex;
+      justify-content: space-between;
+      transition: width 1s;
+    }
+    .nav-menu ul { 
+      justify-items: center;
+      align-items: center;
+      transition: width 1s;
+    }
+    .search {
+      margin-left: 25px;
+      margin-right: 25px;
+      display: flex;
+      transition: width 1s;
+    }
+    .acc-btn {
+      width: auto;
+      margin-right: 20px;
+      display: flex;
+      transition: width 1s;
+    }
+    .shop-car {
+      width: auto;
+      margin-right: 0px;
+      display: flex;
+      transition: width 1s;
+    }
+  }
+  /*mobile menu*/
+  @media screen and (max-width: 1050px) {
+    .nav-menu {
+      width: 55%;
+      display: flex;
+      justify-content: space-between;
+      transition: width 1s;
+    }
+    .menu-resp {
+      display: flex;
+      justify-content: flex-end;
+      width: 90%;
+      transition: width 1s;
+    }
+    .nav-menu ul { 
+      justify-items: center;
+      align-items: center;
+      transition: width 1s;
+    }
+  }
+  
+  
+  /*mobile menu*/
+  @media screen and (max-width: 760px) {
+    .container {
+      padding: 13.3px 0px;
+      width: 90%;
+    }
+    .menu-resp ul {
+      width: 100%;
+      margin: auto;
+      transition: width 2s;
+    }
+    .menu-resp {
+      width: 100%;
+      align-items: center;
+      transition: width 2s;   
+    }
+    .menu-icon {
+      display: inline-flex;
+      font-size: 2rem;
+      margin-left: 10px;
+      top: 0;
+      right: 0;
+      transition: width 2s;
+      transform: translate(-0%, 0%);
+      cursor: pointer;
+    }
+
+    .nav-menu {
+      display: block;
+      position: absolute;
+      top: 54px;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      left: 0;
+      right: 0;
+      -webkit-transform: translateY(130%);
+      -moz-transform: translateY(130%);
+      transform: translateY(-130%);
+      transform-origin: top;
+      -webkit-transition:  0.5s ease-in-out;
+    -moz-transition:  0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    }
+    .nav-menu.active {
+      display: block;
+      width: 100%;
+      height: 0%;
+      max-height: 0%;
+      transform: translateY(1%);
+      -webkit-transition:  0.5s ease-in-out;
+      -moz-transition:  0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      opacity: 10;
+    }
+    .nav-menu a {
+      font-size: 18px;
+      margin-top: 0px;
+      line-height: 300%;
+      padding: 0px 20px;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      background: #2f3640;
+      
+    }
+    .nav-menu a:hover {
+      background: lightslategrey;
+    }
+  
+    .nav-menu li {
+      text-align: center;
+      order: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .shop-car {
+      display: flex;
+      transition: width 5s;
+    }
+    .cartlg {
+      display: none;
+    }
+    .cartx2 {
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      transition: width 8s;
+    }
+    .acc-lg {
+      display: none;
+    }
+    .acc-x2 {
+      font-size: 20px;
+      display: flex;
+      transition: width 8s;
+    }
+    .search {
+      display: flex;
+      transition: width 8s;
+    }
+    .menu-def {
+      width: 50%;
+      display: flex;
+    }
+  }
+  

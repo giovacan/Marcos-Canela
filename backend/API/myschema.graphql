@@ -1,0 +1,27 @@
+type Cliente {
+	id: ID
+	name: String
+	lastname: String
+	username: String
+	age: Int
+	password: String
+	email: String
+}
+type Query {
+	getCliente( id: ID) : Cliente
+}
+input ClienteInput {
+	id: ID
+	name: String
+	lastname: String
+	age: Int
+	username: String
+	password: String
+	email: String 
+}
+type Mutation {
+	""" Te permite crear nuevos clientes y actualizarlos """
+	crearCliente(input: ClienteInput) : Cliente
+	actualizarCliente(input: ClienteInput) : Cliente
+	eliminarCliente( id: ID!) : String
+}

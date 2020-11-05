@@ -1,0 +1,113 @@
+/*promotiones and events*/
+.bannerpe {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white;
+    background: radial-gradient(#ffffff, #CCCCCC);
+  }
+  .containerban {
+    gap: 25%;
+  }
+  
+  .banner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner img {
+    width: 40%;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .banner img:hover {
+    width: 40%;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .textban {
+    width: 45%;
+    color: #2f3640;
+  }
+  .textban h4,
+  .textban h2,
+  .textban p {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .btn-banner {
+    width: 40%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    background-color: #2f3640;
+    border: none;
+    padding: 10px 30px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .btn-banner:hover {
+    width: 40%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    background-color: lightslategray;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  
+  
+  @media screen and (max-width: 830px) {
+    .textban {
+      width: 100%;
+    }
+    .banner img {
+      width: 85%;
+      max-height: 350px;
+    }
+    .banner img:hover {
+      width: 85%;
+      max-height: 350px;
+    }
+    .textban h4,
+    .textban h2,
+    .textban p,
+    .btn-banner {
+      text-align: center;
+      padding: 10px;
+    }
+    .btn-banner {
+      width: 40%;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      margin: auto;
+      color: white;
+      background-color: #2f3640;
+      border: none;
+      padding: 10px 30px;
+    }
+    .btn-banner:hover {
+      width: 50%;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      margin: auto;
+      color: white;
+      background-color: lightslategray;
+      border: none;
+      padding: 10px 30px;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+    }
+  }

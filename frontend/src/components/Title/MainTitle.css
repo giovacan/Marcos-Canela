@@ -1,0 +1,23 @@
+.headnavlogo {
+    width: 25%;
+    display: flex;
+    align-items: center;
+  }
+  
+.head-logo-nav {
+    color: white;
+    font-size: 1.2em;
+  }
+ 
+  @media screen and (max-width: 1050px) {
+    .headnavlogo {
+        width: 25%;
+      }
+  }
+    /*mobile menu*/
+    @media screen and (max-width: 760px) {
+        .headnavlogo {
+            width: 100%;
+            padding: 0%;
+          }
+    }

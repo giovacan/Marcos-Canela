@@ -1,0 +1,139 @@
+.nav-foot {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.foot-container {
+    display: flex;
+    width: 85%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: auto;
+    justify-content: center;
+}
+
+.foot-row {
+    width: 100%;
+    text-align: center;
+}
+.frow1 {
+    text-align: center;
+}
+.social-media {
+    margin-top: 15px;
+}
+.social {
+    display: flex;
+    
+}
+.logofoot {
+    margin-top: 15px;
+}
+.row2menu {
+    justify-content: center;
+    text-align: center;
+}
+.menu-title-list {
+    padding-top: 15px;
+    text-align: center;
+}
+.menu-title-list li {
+    margin-bottom: 10px;
+}
+.link-list{
+    
+    padding-top: 15px;
+}
+.link-list li{
+    padding-bottom: 15px;
+    text-align: right;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 760px) {
+    .nav-foot {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .foot-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+    .foot-row {
+        width: 100%;
+        
+    }
+    .frow1 {
+        
+    }
+    .social-media {
+        margin-top: 30px;
+        justify-content: center;
+    }
+    .social {
+        width: 100%;
+        padding-top: 15px;
+        justify-content: center;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    .social:hover {
+        background-color: #2f3640;
+        cursor: pointer;
+    }
+    .logofoot {
+        width: 100%;
+        padding-top: 15px;
+        justify-content: center;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    .logofoot:hover {
+        background-color: #2f3640;
+        cursor: pointer;
+    }
+    .row2menu {
+        justify-content: center;
+        text-align: center;
+    }
+    .menu-title-list {
+        padding-top: 50px;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    .menu-title-list li {
+        width: 100%;
+        padding-top: 15px;
+        justify-content: center;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    .menu-title-list li:hover {
+        background-color: #2f3640;
+        border: 15px 15px;
+        cursor: pointer;
+    }
+    .link-list{
+        padding-top: 15px;
+        text-align: center;
+        justify-content: center;
+    }
+    .link-list li{
+        width: 100%;
+        padding-top: 15px;
+        justify-content: center;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    .link-list li:hover{
+        background-color: #2f3640;
+        cursor: pointer;
+    }
+}
