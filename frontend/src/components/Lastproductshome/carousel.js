@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function useCarousel(id) {
+function useCarousel(id, numberOfSlides) {
 	const [elements, setElements] = useState({
 		carousel: null
 	})
@@ -16,20 +16,22 @@ function useCarousel(id) {
 	}, [])
 
 	const handleSlideChange = () => {
-		elements.carousel.style.transform = `translateX(${values.offset})`
+		elements.carousel.style.transform = `translateX(${values.offset}%)`
 	}
 
 	useEffect(handleSlideChange, [elements.carousel, values])
 
 	const handleLeftControlClick = () => {
+		const { offset } = values
 		setValues({
-			offset: values.offset - 100
+			offset: offset <= 0 ? offset : offset - 100
 		})
 	}
 
 	const handleRightControlClick = () => {
+		const { offset } = values
 		setValues({
-			offset: values.offset + 100
+			offset: offset >= numberOfSlides ? offset : offset + 100
 		})
 	}
 
