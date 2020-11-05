@@ -14,9 +14,23 @@ function useCarousel(id) {
 		setElements({ carousel })
 	}, [])
 
-	const handleLeftControlClick = () => {}
+	const handleSlideChange = () => {
+		elements.carousel.style.transform = `translateX(${values.offset})`
+	}
 
-	const handleRightControlClick = () => {}
+	useEffect(handleSlideChange, [elements.carousel, values])
+
+	const handleLeftControlClick = () => {
+		setValues({
+			offset: values.offset - 100
+		})
+	}
+
+	const handleRightControlClick = () => {
+		setValues({
+			offset: values.offset + 100
+		})
+	}
 
 	return { handleLeftControlClick, handleRightControlClick }
 }
