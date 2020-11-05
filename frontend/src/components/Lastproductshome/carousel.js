@@ -17,6 +17,12 @@ function useCarousel(id) {
 		const carousel = document.querySelector(`#${id}`)
 		setElements({ leftControl, rightControl, carousel })
 	}, [])
+
+	const handleLeftControlClick = () => {}
+
+	const handleRightControlClick = () => {}
+
+	return { handleLeftControlClick, handleRightControlClick }
 }
 
 export default useCarousel
