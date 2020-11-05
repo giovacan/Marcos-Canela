@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-function useCarousel() {
+function useCarousel(id) {
 	const [elements, setElements] = useState({
 		leftControl: null,
 		rightControl: null,
@@ -10,6 +10,13 @@ function useCarousel() {
 	const [values, setValues] = useState({
 		offset: 0
 	})
+
+	useEffect(() => {
+		const leftControl = document.querySelector(`#${id}-left-control`)
+		const rightControl = document.querySelector(`#${id}-right-control`)
+		const carousel = document.querySelector(`#${id}`)
+		setElements({ leftControl, rightControl, carousel })
+	}, [])
 }
 
 export default useCarousel
