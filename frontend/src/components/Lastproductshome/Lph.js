@@ -1,32 +1,27 @@
 // Import React as usual
 import React from 'react'
 
-// Imports for carrousel
-import useCarousel from './carousel'
 // Import styles
 import './lph.scss'
 
 //import images
 import Img1 from './img/fimgps.jpg'
-import Rightcontroller from './Rightcontrol.js'
-import Leftcontroller from './Leftcontrol.js'
+
+// Import slider component
+import Slider from './Slider'
 
 // carousel funtion
 
 // App component
 function Lph({ carouselId }) {
-	const carousel = useCarousel(carouselId)
-	const { handleLeftControlClick, handleRightControlClick } = carousel
 	return (
 		<div class='last-products'>
 			<div class='titlelph'>
 				<h3>Title</h3>
 			</div>
+			<Slider id={carouselId}></Slider>
 			<div class='featured-products'>
 				<div className='slide-container'>
-					<button className='control previous' onClick={handleLeftControlClick}>
-						<Leftcontroller id='previous' />
-					</button>
 					<div className='carousel'>
 						<div className='product 1'>
 							<img src={Img1} className='img1' alt='' />
@@ -89,9 +84,6 @@ function Lph({ carouselId }) {
 							</div>
 						</div>
 					</div>
-					<button className='control next' onClick={handleRightControlClick}>
-						<Rightcontroller id='next' />
-					</button>
 				</div>
 			</div>
 		</div>
