@@ -11,13 +11,17 @@ function Slider({ id, children }) {
 
 	return (
 		<div className='slider'>
-			<button className='control previous' onClick={handleLeftControlClick}>
-				<Leftcontroller id='previous' />
-			</button>
+			<div className='control-box previous'>
+				<button className='control' onClick={handleLeftControlClick}>
+					<Leftcontroller id='previous' />
+				</button>
+			</div>
 			<div className='slider-box'>{children}</div>
-			<button className='control next' onClick={handleRightControlClick}>
-				<Rightcontroller id='next' />
-			</button>
+			<div className='control-box next'>
+				<button className='control' onClick={handleRightControlClick}>
+					<Rightcontroller id='next' />
+				</button>
+			</div>
 		</div>
 	)
 }

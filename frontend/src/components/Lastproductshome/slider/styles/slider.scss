@@ -8,6 +8,25 @@ div.slider {
 	position: relative;
 }
 
+div.slider div.control-box {
+	width: max-content;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+div.slider div.control-box.previous {
+	left: 0;
+}
+
+div.slider div.control-box.next {
+	right: 0;
+}
+
 div.slider button.control {
 }
 
