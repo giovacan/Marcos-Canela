@@ -8,8 +8,8 @@ import './lph.scss'
 import Img1 from './img/fimgps.jpg'
 
 // Import slider component
-import Slider from './slider/Slider'
-import Slide from './slider/Slide'
+import Slider from '../Slider/Slider'
+import Slide from '../Slider/Slide'
 
 // carousel funtion
 

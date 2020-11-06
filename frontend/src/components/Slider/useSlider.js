@@ -26,7 +26,9 @@ function useSlider(id, numberOfSlides) {
 
 	// Handles translation/change of slides
 	const handleSlideChange = () => {
-		elements.sliderBox.style.transform = `translateX(${values.offset}%)`
+		if (elements.sliderBox) {
+			elements.sliderBox.style.transform = `translateX(${values.offset}%)`
+		}
 	}
 
 	// An effect that triggers when values state changes
