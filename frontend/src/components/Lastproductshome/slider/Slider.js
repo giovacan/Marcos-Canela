@@ -1,12 +1,12 @@
 import React from 'react'
-import useCarousel from './carousel'
+import useSlider from './useSlider'
 import Rightcontroller from './Rightcontrol.js'
 import Leftcontroller from './Leftcontrol.js'
 
 function Slider({ id, children }) {
 	const numberOfSlides = children ? 1 : children.length || null
-	const carousel = useCarousel(id, numberOfSlides)
-	const { handleLeftControlClick, handleRightControlClick } = carousel
+	const slider = useSlider(id, numberOfSlides)
+	const { handleLeftControlClick, handleRightControlClick } = slider
 
 	return (
 		<div className='slider'>

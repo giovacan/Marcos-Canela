@@ -2,14 +2,14 @@
 import { useState, useEffect } from 'react'
 
 /**
- * @function useCarousel A custom hook for carousel logic
- * @param {String} id Id of carousel
+ * @function useSlider A custom hook for creating a slider/carousel
+ * @param {String} id Id of slider/carousel
  * @param {Number} numberOfSlides Number of slides to show
  */
-function useCarousel(id, numberOfSlides) {
+function useSlider(id, numberOfSlides) {
 	// Elements state for storing values od elements
 	const [elements, setElements] = useState({
-		carousel: null
+		sliderBox: null
 	})
 
 	// Values state for translation effect and changing slides
@@ -19,18 +19,18 @@ function useCarousel(id, numberOfSlides) {
 
 	// An effect that sets the value of the carousel element into state
 	useEffect(() => {
-		const carousel = document.querySelector(`#${id}`)
-		setElements({ carousel })
+		const sliderBox = document.querySelector(`#${id}`)
+		setElements({ sliderBox })
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	// Handles translation/change of slides
 	const handleSlideChange = () => {
-		elements.carousel.style.transform = `translateX(${values.offset}%)`
+		elements.sliderBox.style.transform = `translateX(${values.offset}%)`
 	}
 
 	// An effect that triggers when values state changes
-	useEffect(handleSlideChange, [elements.carousel, values])
+	useEffect(handleSlideChange, [elements.sliderBox, values])
 
 	// Handles the click function of the left controller
 	const handleLeftControlClick = () => {
@@ -51,4 +51,4 @@ function useCarousel(id, numberOfSlides) {
 	return { handleLeftControlClick, handleRightControlClick }
 }
 
-export default useCarousel
+export default useSlider
