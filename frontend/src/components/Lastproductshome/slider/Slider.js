@@ -2,6 +2,7 @@ import React from 'react'
 import useSlider from './useSlider'
 import Rightcontroller from './Rightcontrol.js'
 import Leftcontroller from './Leftcontrol.js'
+import './styles/slider.scss'
 
 function Slider({ id, children }) {
 	const numberOfSlides = children ? 1 : children.length || null
@@ -13,9 +14,7 @@ function Slider({ id, children }) {
 			<button className='control previous' onClick={handleLeftControlClick}>
 				<Leftcontroller id='previous' />
 			</button>
-			<div className='slider-box'>
-				<div className='slide'></div>
-			</div>
+			<div className='slider-box'>{children}</div>
 			<button className='control next' onClick={handleRightControlClick}>
 				<Rightcontroller id='next' />
 			</button>
