@@ -38,7 +38,7 @@ function useSlider(id, numberOfSlides) {
 	const handleLeftControlClick = () => {
 		const { offset } = values
 		setValues({
-			offset: offset <= 0 ? offset : offset - 100
+			offset: offset === 0 ? 0 : offset + 100
 		})
 	}
 
@@ -46,7 +46,7 @@ function useSlider(id, numberOfSlides) {
 	const handleRightControlClick = () => {
 		const { offset } = values
 		setValues({
-			offset: offset >= numberOfSlides ? offset : offset + 100
+			offset: offset === (numberOfSlides - 1) * -100 ? (numberOfSlides - 1) * -100 : offset - 100
 		})
 	}
 

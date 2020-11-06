@@ -5,7 +5,7 @@ import Leftcontroller from './Leftcontrol.js'
 import './styles/slider.scss'
 
 function Slider({ id, children }) {
-	const numberOfSlides = children ? 1 : children.length || null
+	const numberOfSlides = !children.length ? 1 : children.length || null
 	const slider = useSlider(id, numberOfSlides)
 	const { handleLeftControlClick, handleRightControlClick } = slider
 
