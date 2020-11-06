@@ -13,7 +13,7 @@ function Slider({ id, children }) {
 		<div className='slider'>
 			<div className='slider-box'>
 				<div className='control-box previous'>
-					<button className='control' onClick={handleLeftControlClick}>
+					<button className='control' onMouseDown={handleLeftControlClick}>
 						<Leftcontroller id='previous' />
 					</button>
 				</div>
@@ -21,7 +21,7 @@ function Slider({ id, children }) {
 					{children}
 				</div>
 				<div className='control-box next'>
-					<button className='control' onClick={handleRightControlClick}>
+					<button className='control' onMouseDown={handleRightControlClick}>
 						<Rightcontroller id='next' />
 					</button>
 				</div>
