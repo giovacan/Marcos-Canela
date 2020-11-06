@@ -17,7 +17,7 @@ function Slider({ id, children }) {
 						<Leftcontroller id='previous' />
 					</button>
 				</div>
-				<div id={id} className='slides' style={{ transitionDelay: '0.3s' }}>
+				<div id={id} className='slides' style={{ transitionDuration: '0.3s' }}>
 					{children}
 				</div>
 				<div className='control-box next'>
