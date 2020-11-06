@@ -28,12 +28,12 @@ div.slider div.control-box.next {
 }
 
 div.slider button.control {
-}
-
-div.slider button.control.previous {
-}
-
-div.slider button.control.next {
+	cursor: pointer;
+	outline: none;
+	border: none;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.2s ease-in-out;
 }
 
 div.slider-box {
