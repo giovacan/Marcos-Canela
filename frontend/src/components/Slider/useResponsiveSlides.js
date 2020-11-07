@@ -12,19 +12,49 @@ export const useMatches = query => {
 const breakpoints = {
 	xs: '(min-width: 0px) and (max-width: 600px)',
 	sm: '(min-width: 601px) and (max-width: 900px)',
-	md: '(min-width: 901px) and (max-width: 800px)',
-	lg: '(min-width: 801px)'
+	md: '(min-width: 901px) and (max-width: 1024px)',
+	lg: '(min-width: 1025px)'
 }
 
 function useResponsiveSlides(children) {
+	const matchesExtraSmallScreen = useMatches(breakpoints.xs)
 	const matchesSmallScreen = useMatches(breakpoints.sm)
+	const matchesMediumScreen = useMatches(breakpoints.md)
+	const matchesLargeScreen = useMatches(breakpoints.lg)
+
+	const handleChildrenSplit = data => {
+		if (data.length % 2 === 0) {
+			if (data.length === 2) {
+				return data
+			} else {
+				const result = data.map((elem, index) => {
+					const temp = []
+					if (temp.length !== 2) {
+						temp.push(elem)
+					}
+					return temp
+				})
+				console.log({ result })
+				return result
+			}
+		} else {
+			return data
+		}
+	}
+
 	let totalChildren = []
 	if (Array.isArray(children)) {
-		children.forEach(({ props }) => {
-			if (matchesSmallScreen) {
-				totalChildren = totalChildren.concat(props.children)
-			}
-		})
+		if (!matchesLargeScreen) {
+			children.forEach(({ props }) => {
+				if (matchesExtraSmallScreen || matchesSmallScreen) {
+					totalChildren = totalChildren.concat(props.children)
+				} else if (matchesMediumScreen) {
+					totalChildren = handleChildrenSplit(props.children)
+				}
+			})
+		} else {
+			return children
+		}
 	} else {
 		totalChildren = totalChildren.concat(children.props.children)
 	}
