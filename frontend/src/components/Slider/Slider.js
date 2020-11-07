@@ -6,10 +6,10 @@ import Leftcontroller from './Leftcontrol.js'
 import './styles/slider.scss'
 
 function Slider({ id, children }) {
-	const numberOfSlides = !children.length ? 1 : children.length || null
+	const renderSlides = useResponsiveSlides(children)
+	const numberOfSlides = renderSlides.length
 	const slider = useSlider(id, numberOfSlides)
 	const { handleLeftControlClick, handleRightControlClick } = slider
-	const renderSlides = useResponsiveSlides(children)
 	return (
 		<div className='slider'>
 			<div className='slider-box'>

@@ -17,15 +17,19 @@ const breakpoints = {
 }
 
 function useResponsiveSlides(children) {
+	const matchesSmallScreen = useMatches(breakpoints.sm)
 	let totalChildren = []
 	if (Array.isArray(children)) {
 		children.forEach(({ props }) => {
-			totalChildren = totalChildren.concat(props.children)
+			if (matchesSmallScreen) {
+				totalChildren = totalChildren.concat(props.children)
+			}
 		})
 	} else {
 		totalChildren = totalChildren.concat(children.props.children)
 	}
-	return totalChildren.map((children, index) => <Slide key={index}>{children}</Slide>)
+	const result = totalChildren.map((childList, index) => <Slide key={index}>{childList}</Slide>)
+	return result
 }
 
 export default useResponsiveSlides
