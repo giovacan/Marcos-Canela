@@ -47,7 +47,7 @@ body {
  
   .acc-lg {
     display: block;
-    margin-right: 50px;
+    margin-right: 0px;
     transition: width 1s;
   }
   .acc-x2 {

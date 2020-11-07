@@ -14,6 +14,7 @@ export default class Leftcontroller extends Component {
 	baseColor = () => {
 		this.setState({ color: '#2f3640' })
 	}
+
 	render() {
 		return (
 			<FaChevronLeft

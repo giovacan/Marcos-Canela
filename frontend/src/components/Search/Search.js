@@ -4,14 +4,14 @@ import "./Search.css";
 function Search() {
   return (
     <ul className="search-container">
-      <li class="search-foot">
+      <li className="search-foot">
         <input
           type="text"
-          class="searchTerm"
+          className="searchTerm"
           placeholder="Buscar algo..."
         ></input>
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
+        <button type="submit" className="searchButton">
+          <i className="fa fa-search"></i>
         </button>
       </li>
     </ul>

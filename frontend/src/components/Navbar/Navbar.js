@@ -13,9 +13,9 @@ class Navbar extends Component {
   
   render()  {
     return (
-      <header class="container">
+      <header className="container">
       <MainTitle />
-      <nav class="menu-resp">
+      <nav className="menu-resp">
         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
         { NavItemsResp.map((item, index) => {
           return (
@@ -23,31 +23,31 @@ class Navbar extends Component {
           )
         })}
         </ul>
-        <div class="menu-def"></div>
-        <ul class="search">
-          <li><a href="#top"><i class="fa fa-search fa-lg" aria-hidden="true"></i></a></li>
+        <div className="menu-def"></div>
+        <ul className="search">
+          <li><a href="#top"><i className="fa fa-search fa-lg" aria-hidden="true"></i></a></li>
         </ul>  
-        <ul class="acc-btn">
+        <ul className="acc-btn">
         { NavItemsLogin.map((item, index) => {
           return (
-            <li key={index}><a className={NavItemsLogin} class="cartlg" href={item.url}>{item.title}<i className={item.icon}></i></a></li>
+            <li key={index}><a className={NavItemsLogin, item.zid}  href={item.url}>{item.title}<i className={item.icon}></i></a></li>
           )
         })}
         { NavItemsLogin.map((item, index) => {
           return (
-            <li key={index}><a className={NavItemsLogin} class="cartx2" href={item.url}><i className={item.icon}></i></a></li>
+            <li key={index}><a className={NavItemsLogin, item.zim}  href={item.url}><i className={item.icon}></i></a></li>
           )
         })}
         </ul>
-        <ul class="shop-car">
+        <ul className="shop-car">
         { NavItemsStore.map((item, index) => {
           return (
-            <li key={index}><a className={NavItemsStore} class="cartlg" href={item.url}>{item.title}<i className={item.icon}></i></a></li>
+            <li key={index}><a className={NavItemsStore, item.zid}  href={item.url}>{item.title}<i className={item.icon}></i></a></li>
           )
         })}
         { NavItemsStore.map((item, index) => {
           return (
-            <li key={index}><a className={NavItemsStore} class="cartx2" href={item.url}><i className={item.icon}></i></a></li>
+            <li key={index}><a className={NavItemsStore, item.zim}  href={item.url}><i className={item.icon}></i></a></li>
           )
         })}
         </ul>

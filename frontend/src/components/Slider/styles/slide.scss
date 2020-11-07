@@ -1,15 +1,55 @@
 div.slide {
-	min-width: 100%;
+	min-width: 85%;
+	margin-left: 93px;
 	height: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-around;
+	color: #2f3640;
 }
 
 div.slide:nth-child(n) {
-	background: lightblue;
+	
 }
 
 div.slide:nth-child(2n) {
-	background: blue;
+	
 }
+@media screen and (max-width: 1200px) {
+	div.slide {
+		min-width:35%;
+		margin-left: 10.2%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		color: #2f3640;
+	}
+	div.slide:nth-child(n) {
+	
+	}
+	
+	div.slide:nth-child(2n) {
+	}
+	
+  }
+
+@media screen and (max-width: 760px) {
+	div.slide {
+		min-width:150%;
+		margin-left: -25%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		color: #2f3640;
+	}
+	div.slide:nth-child(n) {
+	
+	}
+	
+	div.slide:nth-child(2n) {
+		
+	}
+	
+  }

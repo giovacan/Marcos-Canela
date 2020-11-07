@@ -1,3 +1,4 @@
+
 /* Titulos */
 .titlelph {
 	width: 25%;
@@ -41,6 +42,15 @@
 	top: 10px;
 }
 
+ /*LPH*/ 
+ .last-products {
+  width: 100%;
+  height: 40%;
+  background-color: white;
+  padding-bottom: 3%;
+}
+
+
 .slide-container {
 	display: flex;
 	color: #2f3640;
@@ -49,22 +59,12 @@
 	align-content: center;
 	align-items: center;
 }
-.carousel {
-	display: flex;
-	color: #2f3640;
-	width: 80%;
-	margin: auto;
-	justify-content: space-between;
-	align-content: center;
-	align-items: center;
-	flex-direction: row;
-	transform: translateX(-0%);
-}
-.img1 {
-	width: auto;
-	max-width: 300px;
-	height: auto;
-	max-height: 300px;
+
+.img1{
+  width: auto;
+  max-width: 300px;
+  height: auto;
+  max-height: 300px;
 }
 .titleproduct {
 	text-align: center;
@@ -119,40 +119,13 @@
 	background-color: lightslategrey;
 }
 
-/* carousel controller */
-.control {
-	display: flex;
-	position: absolute;
-	cursor: pointer;
-}
-.previous {
-	left: 0px;
-}
-.next {
-	right: 0px;
-}
-
 @media screen and (max-width: 760px) {
-	.last-products {
-		height: 40%;
-		background-color: white;
-		padding-bottom: 3%;
-	}
-	.slide-container {
-		display: flex;
-		width: 100%;
-		color: #2f3640;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-	.carousel {
-		display: flex;
-		color: #2f3640;
-		width: 100%;
-		margin-left: 133px;
-		flex-direction: row;
-		justify-content: space-between;
-		transform: translateX(-0%);
-		overflow: hidden;
-	}
+  .last-products {
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    padding-bottom: 3%;
+    
+  }
+  
 }

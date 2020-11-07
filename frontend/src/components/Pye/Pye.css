@@ -87,7 +87,7 @@
       padding: 10px;
     }
     .btn-banner {
-      width: 40%;
+      width: 50%;
       align-content: center;
       justify-content: center;
       text-align: center;
@@ -98,7 +98,7 @@
       padding: 10px 30px;
     }
     .btn-banner:hover {
-      width: 50%;
+      width: 55%;
       align-content: center;
       justify-content: center;
       text-align: center;
@@ -111,3 +111,32 @@
       cursor: pointer;
     }
   }
+
+  /* Titulos */
+.titlelph {
+  width: 25%;
+  margin: auto;
+  color: #ffffff;
+  padding-bottom: 15px;
+  transition: width 2s;
+}
+.titlelph h3:after {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  background: lightslategray;
+  content: 'Tienda';
+  transition: 0.5s ease-in-out;
+}
+.titlelph h3:hover:after {
+  background-color: #2f3640;
+  content: 'Más Productos';
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+@media screen and (max-width: 790px) {
+  .titlelph {
+    width: 100%;
+  }
+}
