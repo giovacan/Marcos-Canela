@@ -22,18 +22,37 @@ function useResponsiveSlides(children) {
 	const matchesMediumScreen = useMatches(breakpoints.md)
 	const matchesLargeScreen = useMatches(breakpoints.lg)
 
-	const handleChildrenSplit = data => {}
+	const handleDataSplit = data => {
+		const factor = Math.round(data.length / 2)
+		const result = []
+		let counter = 0
+		while (counter < factor) {
+			if (counter < 1) {
+				result.push([data[counter], data[counter + 1]])
+			} else {
+				if (data[counter + 2] && counter + 2 !== data.length - 1) {
+					result.push([data[counter + 1], data[counter + 2]])
+				} else {
+					result.push([data[counter + 1]])
+				}
+			}
+			counter += 1
+		}
+		return result
+	}
 
 	let totalChildren = []
 	if (Array.isArray(children)) {
 		if (!matchesLargeScreen) {
 			children.forEach(({ props }) => {
-				if (matchesExtraSmallScreen || matchesSmallScreen) {
-					totalChildren = totalChildren.concat(props.children)
-				} else if (matchesMediumScreen) {
-					totalChildren = handleChildrenSplit(props.children)
+				if (matchesExtraSmallScreen || matchesSmallScreen || matchesMediumScreen) {
+					const result = totalChildren.concat(props.children)
+					totalChildren = result
 				}
 			})
+			if (matchesMediumScreen) {
+				totalChildren = handleDataSplit(totalChildren)
+			}
 		} else {
 			return children
 		}
