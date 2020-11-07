@@ -1,6 +1,7 @@
 // Import useState and useEffect hooks
 import { useState, useEffect } from 'react'
 
+
 /**
  * @function useSlider A custom hook for creating a slider/carousel
  * @param {String} id Id of slider/carousel
@@ -38,7 +39,7 @@ function useSlider(id, numberOfSlides) {
 	const handleLeftControlClick = () => {
 		const { offset } = values
 		setValues({
-			offset: offset === 0 ? 0 : offset + 100
+			offset: offset === 0 ? 0 : offset + 125
 		})
 	}
 
@@ -46,7 +47,7 @@ function useSlider(id, numberOfSlides) {
 	const handleRightControlClick = () => {
 		const { offset } = values
 		setValues({
-			offset: offset === (numberOfSlides - 1) * -100 ? (numberOfSlides - 1) * -100 : offset - 100
+			offset: offset === (numberOfSlides - 1) * -125 ? (numberOfSlides - 1) * -125 : offset - 125
 		})
 	}
 

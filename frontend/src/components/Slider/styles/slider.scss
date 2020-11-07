@@ -34,8 +34,9 @@ div.slider button.control {
 	position: relative;
 	overflow: hidden;
 	transition: all 0.2s ease-in-out;
+	background: none;
+	font-size: 20px;
 }
-
 div.slider-box,
 div.slides {
 	width: 100%;
@@ -47,3 +48,24 @@ div.slides {
 	transition-property: all;
 	transition-timing-function: ease;
 }
+
+@media screen and (max-width: 760px) {
+	div.slider div.control-box {
+		width: max-content;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 20;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	div.slider div.control-box.previous {
+		left: -25px;
+	}
+	
+	div.slider div.control-box.next {
+		right: -25px;
+	}
+	
+  }

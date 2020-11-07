@@ -6,7 +6,7 @@ export default class Leftcontroller extends Component {
 		super(props)
 		this.state = {
 			color: '#2f3640',
-			size: '8rem'
+			size: '6.5rem'
 		}
 	}
 	shouldComponentUpdate() {
@@ -19,10 +19,10 @@ export default class Leftcontroller extends Component {
 		this.setState({ color: '#2f3640' })
 	}
 	changeSize = () => {
-		this.setState({ size: '7.8em' })
+		this.setState({ size: '6rem' })
 	}
 	baseSize = () => {
-		this.setState({ size: '8em' })
+		this.setState({ size: '6.5rem' })
 	}
 	render() {
 		return (
@@ -31,8 +31,8 @@ export default class Leftcontroller extends Component {
 				color={this.state.color}
 				onMouseOver={this.changeColor}
 				onMouseOut={this.baseColor}
-				onMouseDown={this.changeSize}
 				onMouseUp={this.baseSize}
+				onMouseDown={this.changeSize}
 			/>
 		)
 	}

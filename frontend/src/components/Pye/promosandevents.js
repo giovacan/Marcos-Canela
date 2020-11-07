@@ -18,8 +18,7 @@ function Pye () {
                   </div>
                 </div>
               </div>
-            </div>
-                
+            </div>    
       )
     }
   
