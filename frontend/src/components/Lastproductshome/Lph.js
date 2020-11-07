@@ -40,22 +40,7 @@ function Lph({ carouselId }) {
 					<div className='product 2'>
 						<img src={Img1} className='img1' alt='' />
 						<h2 className='titleproduct'>Hola mundo</h2>
-						<p className='description-product'>Precio: $200.00 MXN</p>
-						<div className='btns-product'>
-							<div className='details'>
-								<div className='btn-detail'>Detalles</div>
-							</div>
-							<div className='add-to-cart'>
-								<div className='btn-add-cart'>
-									<i class='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className='product 3'>
-						<img src={Img1} className='img1' alt='' />
-						<h2 className='titleproduct'>Hola mundo</h2>
-						<p className='description-product'>Precio: $300.00 MXN</p>
+						<p className='description-product'>Precio: $100.00 MXN</p>
 						<div className='btns-product'>
 							<div className='details'>
 								<div className='btn-detail'>Detalles</div>
@@ -72,7 +57,7 @@ function Lph({ carouselId }) {
 					<div className='product 3'>
 						<img src={Img1} className='img1' alt='' />
 						<h2 className='titleproduct'>Hola mundo</h2>
-						<p className='description-product'>Precio: $400.00 MXN</p>
+						<p className='description-product'>Precio: $100.00 MXN</p>
 						<div className='btns-product'>
 							<div className='details'>
 								<div className='btn-detail'>Detalles</div>
@@ -87,7 +72,7 @@ function Lph({ carouselId }) {
 					<div className='product 4'>
 						<img src={Img1} className='img1' alt='' />
 						<h2 className='titleproduct'>Hola mundo</h2>
-						<p className='description-product'>Precio: $500.00 MXN</p>
+						<p className='description-product'>Precio: $100.00 MXN</p>
 						<div className='btns-product'>
 							<div className='details'>
 								<div className='btn-detail'>Detalles</div>
