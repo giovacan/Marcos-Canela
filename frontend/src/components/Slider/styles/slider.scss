@@ -35,6 +35,10 @@ div.slider button.control {
 	transition: all 0.2s ease-in-out;
 }
 
+div.slider button.control:active {
+	transform: scale(1.2);
+}
+
 div.slider-box,
 div.slides {
 	width: 100%;
