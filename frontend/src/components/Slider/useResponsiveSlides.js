@@ -22,25 +22,7 @@ function useResponsiveSlides(children) {
 	const matchesMediumScreen = useMatches(breakpoints.md)
 	const matchesLargeScreen = useMatches(breakpoints.lg)
 
-	const handleChildrenSplit = data => {
-		if (data.length % 2 === 0) {
-			if (data.length === 2) {
-				return data
-			} else {
-				const result = data.map((elem, index) => {
-					const temp = []
-					if (temp.length !== 2) {
-						temp.push(elem)
-					}
-					return temp
-				})
-				console.log({ result })
-				return result
-			}
-		} else {
-			return data
-		}
-	}
+	const handleChildrenSplit = data => {}
 
 	let totalChildren = []
 	if (Array.isArray(children)) {
