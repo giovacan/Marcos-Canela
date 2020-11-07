@@ -1,5 +1,10 @@
 import { useState } from 'react'
 
+/**
+ * A hook that returns true/false when a screen size breakpoint is reached
+ * @param {string} query CSS Media Query string
+ * @returns {boolean}
+ */
 const useMediaQuery = query => {
 	const [isMatch, setIsMatch] = useState(matchMedia(query).matches)
 	matchMedia(query).onchange = () => {
@@ -8,6 +13,7 @@ const useMediaQuery = query => {
 	return isMatch
 }
 
+// Screen sizes
 export const breakpoints = {
 	xs: '(min-width: 0px) and (max-width: 600px)',
 	sm: '(min-width: 601px) and (max-width: 900px)',

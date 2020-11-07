@@ -1,12 +1,22 @@
 import Slide from './Slide'
 import useMediaQuery, { breakpoints } from './useMediaQuery'
 
+/**
+ * A hook that makes the slider component responsive
+ * @param {Array|Object} children Slider children from props.chlildren
+ * @returns {Array}
+ */
 function useResponsiveSlides(children) {
 	const matchesExtraSmallScreen = useMediaQuery(breakpoints.xs)
 	const matchesSmallScreen = useMediaQuery(breakpoints.sm)
 	const matchesMediumScreen = useMediaQuery(breakpoints.md)
 	const matchesLargeScreen = useMediaQuery(breakpoints.lg)
 
+	/**
+	 * Splits an array into an array of arrays
+	 * @param {Array} data
+	 * @returns {Array}
+	 */
 	const handleDataSplit = data => {
 		const factor = Math.round(data.length / 2)
 		const result = []
