@@ -1,6 +1,5 @@
 // Import React as usual
 import React from 'react'
-import {withGetScreen} from 'react-getscreen'
 
 // Import styles
 import './lph.scss'
@@ -17,8 +16,8 @@ import Slide from '../Slider/Slide'
 // App component
 function Lph({ carouselId }) {
 	return (
-		<div class='last-products'>
-			<div class='titlelph'>
+		<div className='last-products'>
+			<div className='titlelph'>
 				<h3></h3>
 			</div>
 			<Slider id={carouselId}>
@@ -33,7 +32,7 @@ function Lph({ carouselId }) {
 							</div>
 							<div className='add-to-cart'>
 								<div className='btn-add-cart'>
-									<i class='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
+									<i className='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
 								</div>
 							</div>
 						</div>
@@ -50,7 +49,7 @@ function Lph({ carouselId }) {
 							</div>
 							<div className='add-to-cart'>
 								<div className='btn-add-cart'>
-									<i class='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
+									<i className='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
 								</div>
 							</div>
 						</div>
@@ -67,7 +66,7 @@ function Lph({ carouselId }) {
 							</div>
 							<div className='add-to-cart'>
 								<div className='btn-add-cart'>
-									<i class='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
+									<i className='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
 								</div>
 							</div>
 						</div>
@@ -84,7 +83,7 @@ function Lph({ carouselId }) {
 							</div>
 							<div className='add-to-cart'>
 								<div className='btn-add-cart'>
-									<i class='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
+									<i className='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
 								</div>
 							</div>
 						</div>
@@ -101,7 +100,7 @@ function Lph({ carouselId }) {
 							</div>
 							<div className='add-to-cart'>
 								<div className='btn-add-cart'>
-									<i class='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
+									<i className='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
 								</div>
 							</div>
 						</div>
@@ -118,7 +117,7 @@ function Lph({ carouselId }) {
 							</div>
 							<div className='add-to-cart'>
 								<div className='btn-add-cart'>
-									<i class='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
+									<i className='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
 								</div>
 							</div>
 						</div>
@@ -135,7 +134,7 @@ function Lph({ carouselId }) {
 							</div>
 							<div className='add-to-cart'>
 								<div className='btn-add-cart'>
-									<i class='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
+									<i className='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
 								</div>
 							</div>
 						</div>
@@ -152,14 +151,14 @@ function Lph({ carouselId }) {
 							</div>
 							<div className='add-to-cart'>
 								<div className='btn-add-cart'>
-									<i class='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
+									<i className='fas fa-shopping-cart' aria-hidden='true' size='x2'></i>
 								</div>
 							</div>
 						</div>
 					</div>
 				</Slide>
 			</Slider>
-			<div class='featured-products'></div>
+			<div className='featured-products'></div>
 		</div>
 	)
 }

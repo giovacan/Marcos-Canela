@@ -21,7 +21,7 @@ import Search from "../Search/Search";
 
 function Foot() {
   return (
-    <foot className="nav-foot">
+    <div className="nav-foot">
       <div className="foot-container">
         <div className="foot-row frow1">
           <h2>Social Media</h2>
@@ -34,10 +34,10 @@ function Foot() {
                     href={item.url}
                     target="_blank"
                   >
-                    <li className="social">
+                    <div className="social">
                       <FaFacebookSquare size="2em" />
                       <p>{item.title}</p>
-                    </li>
+                    </div>
                   </a>
                 </li>
               );
@@ -50,10 +50,10 @@ function Foot() {
                     href={item.url}
                     target="_blank"
                   >
-                    <li className="social">
+                    <div className="social">
                       <FaInstagram size="2em" />
                       <p>{item.title}</p>
-                    </li>
+                    </div>
                   </a>
                 </li>
               );
@@ -62,10 +62,10 @@ function Foot() {
               return (
                 <li key={index} className="social1">
                   <a className={Social_Youtube} href={item.url} target="_blank">
-                    <li className="social">
+                    <div className="social">
                       <FaYoutube size="2em" />
                       <p>{item.title}</p>
-                    </li>
+                    </div>
                   </a>
                 </li>
               );
@@ -74,15 +74,15 @@ function Foot() {
               return (
                 <li key={index} className="social1">
                   <a className={Social_Twitter} href={item.url} target="_blank">
-                    <li className="social">
+                    <div className="social">
                       <FaTwitter size="2em" />
                       <p>{item.title}</p>
-                    </li>
+                    </div>
                   </a>
                 </li>
               );
             })}
-            <li classname="logofoot">
+            <li className="logofoot">
               <FootTitle />
             </li>
           </ul>
@@ -123,7 +123,7 @@ function Foot() {
         </div>
         <div className="foot-row frow3">
           <h2>Links</h2>
-          <ul class="link-list">
+          <ul className="link-list">
           <Search />  
             {links.map((item, index) => {
               return (
@@ -138,7 +138,7 @@ function Foot() {
         </div>
       </div>
       <p>©2020 Marcos Canela by EstudioMas</p>
-    </foot>
+    </div>
   );
 }
 
