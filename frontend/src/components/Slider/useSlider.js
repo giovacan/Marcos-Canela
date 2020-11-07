@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 
 /**
- * @function useSlider A custom hook for creating a slider/carousel
+ * A custom hook for creating a slider/carousel
  * @param {String} id Id of slider/carousel
  * @param {Number} numberOfSlides Number of slides to show
  */
