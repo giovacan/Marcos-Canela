@@ -17,6 +17,7 @@ export default class Rightcontroller extends Component {
 	render() {
 		return (
 			<FaChevronRight
+				size='3rem'
 				color={this.state.color}
 				onMouseOver={this.changeColor}
 				onMouseOut={this.baseColor}

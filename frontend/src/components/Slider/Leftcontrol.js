@@ -17,6 +17,7 @@ export default class Leftcontroller extends Component {
 	render() {
 		return (
 			<FaChevronLeft
+				size='3rem'
 				color={this.state.color}
 				onMouseOver={this.changeColor}
 				onMouseOut={this.baseColor}
